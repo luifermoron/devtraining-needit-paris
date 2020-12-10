@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>If Current Employee choice is No then End Date field is displayed otherwise the field&#13;
+is not visible.</description>
+        <field>current_employee</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>EMP Show End Date when Choice=NO Only</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+
+    // Modified the if to return if the newValue == oldValue to avoid
+    // unecessary trips to the server
+    if (newValue === '' || newValue == oldValue) {
+        return;
+    }
+	var NO_CHOICE = 0;
+	if (newValue == NO_CHOICE)
+		g_form.setVisible('end_date', false);
+	else
+		g_form.setVisible('end_date', true);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-10 20:05:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1bda03fc2fcd601088d43e0ef699b6fb</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>EMP Show End Date when Choice=NO Only</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_client_1bda03fc2fcd601088d43e0ef699b6fb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-10 20:38:51</sys_updated_on>
+        <table>x_58872_needit_employees</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
