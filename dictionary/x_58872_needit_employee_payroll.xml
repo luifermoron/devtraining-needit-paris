@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Employee Payroll" max_length="40" name="x_58872_needit_employee_payroll" type="collection">
+        <element label="Annual Salary" max_length="20" name="annual_salary" type="currency" virtual="true"/>
+        <element label="EmployeeID" max_length="32" name="employeeid" reference="x_58872_needit_employees" type="reference"/>
+        <element label="First Name" max_length="50" name="first_name" read_only="true" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;var TOTAL_WEEKS_PER_YEAR = 26;&#13;&#10;&#9;var annual_salary = parseInt(g_form.getValue('annual_salary'));&#13;&#10;&#9;var result = annual_salary / TOTAL_WEEKS_PER_YEAR;&#13;&#10;&#9;return result.toString();&#13;&#10;&#13;&#10;})(current);" label="Gross Income Per Paycheck" max_length="20" name="gross_income_per_paycheck" type="currency" virtual="true"/>
+        <element label="Last Name" max_length="50" name="last_name" read_only="true" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;var tax = 0.90;&#13;&#10;&#9;var gross_income_per_paycheck = parseInt(g_form.getValue('gross_income_per_paycheck'));&#13;&#10;&#9;var result = annual_salary * tax;&#13;&#10;&#9;return result.toString();&#13;&#10;&#13;&#10;})(current);" label="Paycheck Amount after Taxes" max_length="20" name="paycheck_amount_after_taxes" type="currency" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;var TOTAL_WEEKS_OF_YEAR = 56;&#13;&#10;&#9;var current_week_of_year = 20; //just an example&#13;&#10;&#9;&#13;&#10;&#9;var annual_salary = parseInt(g_form.getValue('annual_salary'));&#13;&#10;&#9;var result = (current_week_of_year * annual_salary) / TOTAL_WEEKS_OF_YEAR;&#13;&#10;&#9;return result.toString();&#13;&#10;&#13;&#10;})(current);" label="YTD Income" max_length="20" name="ytd_income" type="currency" virtual="true"/>
+        <index name="index">
+            <element name="employeeid"/>
+        </index>
+    </element>
+</database>
