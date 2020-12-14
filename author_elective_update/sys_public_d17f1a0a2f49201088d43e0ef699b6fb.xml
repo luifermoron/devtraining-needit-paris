@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_public">
+    <sys_public action="DELETE">
+        <active>true</active>
+        <page>_employee_payroll</page>
+        <sys_class_name>sys_public</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-14 13:08:20</sys_created_on>
+        <sys_id>d17f1a0a2f49201088d43e0ef699b6fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>_employee_payroll</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_public_d17f1a0a2f49201088d43e0ef699b6fb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-14 13:08:20</sys_updated_on>
+    </sys_public>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>4a6d187cdb41bbc052cec5970596195e</instance_id>
+        <instance_name>dev83050</instance_name>
+        <name>sys_public_d17f1a0a2f49201088d43e0ef699b6fb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_public"><sys_public action="INSERT_OR_UPDATE"><active>true</active><page>_employee_payroll</page><sys_class_name>sys_public</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-12-14 13:08:20</sys_created_on><sys_id>d17f1a0a2f49201088d43e0ef699b6fb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>_employee_payroll</sys_name><sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package><sys_policy/><sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope><sys_update_name>sys_public_d17f1a0a2f49201088d43e0ef699b6fb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-12-14 13:08:20</sys_updated_on></sys_public></record_update>]]></payload>
+        <payload_hash>-1931371855</payload_hash>
+        <record_name>_employee_payroll</record_name>
+        <reverted_from/>
+        <source>53f9bec12f01201088d43e0ef699b667</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-14 13:08:20</sys_created_on>
+        <sys_id>4d8f1e0a2f49201088d43e0ef699b6f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>176615db7b60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-14 13:08:20</sys_updated_on>
+        <type>Public Pages</type>
+        <update_guid>898f52c6ae49201013e7a4599d72e289</update_guid>
+        <update_guid_history>898f52c6ae49201013e7a4599d72e289:-1931371855</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-14 13:08:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_public">sys_public</sys_db_object>
+        <sys_id>6e3a66b7d9994fb888246767775448a1</sys_id>
+        <sys_metadata>d17f1a0a2f49201088d43e0ef699b6fb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>_employee_payroll</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_public_d17f1a0a2f49201088d43e0ef699b6fb</sys_update_name>
+        <sys_update_version display_value="sys_public_d17f1a0a2f49201088d43e0ef699b6fb">4d8f1e0a2f49201088d43e0ef699b6f0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-14 13:08:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

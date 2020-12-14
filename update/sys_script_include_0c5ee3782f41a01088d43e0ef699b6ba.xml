@@ -2,14 +2,14 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_58872_needit.GetEmployeePosition</api_name>
+        <api_name>x_58872_needit.EmployeeInformation</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
         <description/>
-        <name>GetEmployeePosition</name>
-        <script><![CDATA[var GetEmployeePosition = Class.create();
+        <name>EmployeeInformation</name>
+        <script><![CDATA[var EmployeeInformation = Class.create();
 // Extend the global.AbstractAjaxProcessor class
-GetEmployeePosition.prototype = Object.extendsObject(global.AbstractAjaxProcessor,{
+EmployeeInformation.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     // Define the getEmail function.  
     // Create a GlideRecord for the User table.
     // Use the sysparm_userID passed from the client side to retrieve a record from the User table.
@@ -19,19 +19,26 @@ GetEmployeePosition.prototype = Object.extendsObject(global.AbstractAjaxProcesso
         employeeRecord.get(this.getParameter('sysparm_employeeRecord'));
         return employeeRecord.position.getDisplayValue() + '';
     },
-    type: 'GetEmployeePosition'
+    getEmployeeNames: function() {
+        var employeeRecord = new GlideRecord("x_58872_needit_employees");
+        employeeRecord.get(this.getParameter('sysparm_employeeRecord'));
+		var fist_name = employeeRecord.first_name + '';
+		var last_name = employeeRecord.last_name + '';
+        return fist_name + ';' + last_name;
+    },
+    type: 'EmployeeInformation'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-12-10 21:42:36</sys_created_on>
         <sys_id>0c5ee3782f41a01088d43e0ef699b6ba</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>GetEmployeePosition</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>EmployeeInformation</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_include_0c5ee3782f41a01088d43e0ef699b6ba</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-12-10 21:51:03</sys_updated_on>
+        <sys_updated_on>2020-12-13 21:57:31</sys_updated_on>
     </sys_script_include>
 </record_update>
